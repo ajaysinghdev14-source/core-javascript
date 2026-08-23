@@ -43,3 +43,31 @@ function brewAndCount(name) {
 
 brewAndCount('sage')
 brewAndCount('rosemary')
+
+// HOF
+function anotherFunctionForClass(brewAndCount) {
+    return function newBrew() {
+        // do something
+    }
+}
+
+// IIFF
+// Immediately Invoked Function Expression
+// ()()
+// (function () {})()
+// (() => {})()
+const potionShop = (() => {
+    let inventory = 0;
+    return {
+        brew() {
+            inventory++;
+            return `Brew potion #${inventory}`
+        },
+        getStock() {
+            return inventory
+        }
+    }
+})()
+console.log(potionShop)
+console.log(potionShop.brew())
+console.log(potionShop.inventory)
