@@ -62,10 +62,15 @@ filmSet.prepareProps()
 //
 const actor = {
     name: 'Ranveer',
-    bow() {
+    // bow() {
+    //     return `${this.name} takes a bow`
+    // }
+    bow: () => {
         return `${this.name} takes a bow`
     }
 }
+
+console.log(actor.bow())
 
 const detachedBow = actor.bow
 console.log(detachedBow())
