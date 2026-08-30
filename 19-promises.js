@@ -58,4 +58,3 @@ prepareOrder('panner tikka')
     .then(order => pickUpOrder(order))
     .then(order => deliveredOrder(order))
     .catch(err => console.error(err))
-
