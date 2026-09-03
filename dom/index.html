@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<button id="clickBtn">Click Me</button>
+<script>
+    let btnRef = window.document.getElementById('clickBtn')
+    btnRef.style.backgroundColor = 'red'
+
+    const onClickHandler = function () {
+        console.log('button clicked')
+        btnRef.removeEventListener('click', onClickHandler)
+    }
+
+    btnRef.addEventListener('click', onClickHandler)
+
+</script>
+
+</body>
+</html>
